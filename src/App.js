@@ -4,7 +4,6 @@ import Search from "./components/Search";
 import useNotes from "./hooks/useNotes";
 import Modal from "./components/Modal";
 import Context from "./scripts/context";
-// import useStorage from "./hooks/useStorage";
 
 function App() {
   const [notes, setNotes, addNote, deleteNote, updateNote, setComplete] =

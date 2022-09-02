@@ -9,7 +9,6 @@
 # production
 /build
 
-useStorage.jsx
 # misc
 .DS_Store
 .env.local
