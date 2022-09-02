@@ -15,8 +15,7 @@
 }
 
 .note-effect:hover,
-.note-effect:focus,
-.note-effect:active {
+.note-effect:focus {
   scale: 1.05;
 }
 
@@ -30,6 +29,22 @@
 
 .note-span {
   pointer-events: none;
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  width: auto;
+  transition: scale 0.25s ease-in-out;
+}
+
+.icon-button:hover,
+.icon-button:focus,
+.icon-button:active {
+  scale: 1.1;
 }
 
 textarea {
@@ -64,12 +79,6 @@ textarea:focus {
 .icon {
   cursor: pointer;
   transition: scale 0.25s ease-in-out;
-}
-
-.icon:hover,
-.icon:focus,
-.icon:active {
-  scale: 1.1;
 }
 
 /* Note styles end */
@@ -146,10 +155,10 @@ textarea:focus {
 }
 
 .icon-places {
-  width: 50px;
+  width: 100px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .fullNote__area {
@@ -173,4 +182,7 @@ textarea:focus {
   transform: translateX(60%);
 }
 
+.Tippy {
+  z-index: 100;
+}
 /* CompleteArea styles end */

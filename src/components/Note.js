@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { MdCleaningServices, MdDeleteForever } from "react-icons/md";
+import Tippy from "@tippyjs/react";
+import { MdDeleteForever } from "react-icons/md";
 import Context from "../scripts/context";
 
 const Note = ({ id, text, date, isComplete, handleDeleteNote, setModal }) => {
@@ -27,13 +28,17 @@ const Note = ({ id, text, date, isComplete, handleDeleteNote, setModal }) => {
       </span>
       <div className="note-footer">
         <small>{date}</small>
-        <MdDeleteForever
-          onClick={() => {
-            handleDeleteNote(id);
-          }}
-          className="delete-icon icon"
-          size="1.3em"
-        />
+        <Tippy content="Delete" delay={[500, 0]}>
+          <button
+            className="icon-button"
+            size="1.3em"
+            onClick={() => {
+              handleDeleteNote(id);
+            }}
+          >
+            <MdDeleteForever className="delete-icon icon" size="1.3em" />
+          </button>
+        </Tippy>
       </div>
     </div>
   );

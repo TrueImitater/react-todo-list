@@ -15,7 +15,6 @@ function App() {
 
   useEffect(() => {
     if (localStorage.length == 0) {
-      console.log("Обновил Storage");
       localStorage.setItem("react-notes-array", JSON.stringify(notes));
     } else {
       setNotes(JSON.parse(localStorage.getItem("react-notes-array")));
@@ -23,7 +22,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log("useEffect2");
     localStorage.setItem("react-notes-array", JSON.stringify(notes));
   }, [notes]);
 

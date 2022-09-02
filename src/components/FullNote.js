@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import Tippy from "@tippyjs/react";
 import { MdOutlineSystemUpdateAlt, MdDeleteForever } from "react-icons/md";
 import Context from "../scripts/context";
 
@@ -31,21 +32,32 @@ const FullNote = ({ setModal }) => {
       <div className="note-footer">
         <small>{characterLimit - noteText.length} Remaining</small>
         <div className="icon-places">
-          <MdOutlineSystemUpdateAlt
-            onClick={() => {
-              updateNote(clickedNote.id, noteText);
-            }}
-            className="update-icons icon"
-            size="1.3em"
-          />
-          <MdDeleteForever
-            className="delete-icon icon"
-            size="1.3em"
-            onClick={() => {
-              deleteNote(clickedNote.id);
-              setModal((prev) => !prev);
-            }}
-          />
+          <Tippy content="Update" delay={[500, 0]}>
+            <button
+              onClick={() => {
+                updateNote(clickedNote.id, noteText);
+              }}
+              className="icon-button"
+              size="2em"
+            >
+              <MdOutlineSystemUpdateAlt
+                className="update-icons icon"
+                size="2em"
+              />
+            </button>
+          </Tippy>
+          <Tippy content="Delete" delay={[500, 0]}>
+            <button
+              onClick={() => {
+                deleteNote(clickedNote.id);
+                setModal((prev) => !prev);
+              }}
+              className="icon-button"
+              size="2em"
+            >
+              <MdDeleteForever className="delete-icon icon" size="2em" />
+            </button>
+          </Tippy>
         </div>
       </div>
     </div>

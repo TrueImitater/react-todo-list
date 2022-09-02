@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 const AddNote = ({ handleAddNote }) => {
   const [noteText, setNoteText] = useState("");
@@ -31,7 +33,7 @@ const AddNote = ({ handleAddNote }) => {
       ></textarea>
       <div className="note-footer">
         <small>{characterLimit - noteText.length} Remaining</small>
-        <button className="save" onClick={handleSaveClick}>
+        <button className="save" onClick={handleSaveClick} id="myButton">
           Save
         </button>
       </div>
