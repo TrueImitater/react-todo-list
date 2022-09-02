@@ -1,3 +1,20 @@
+/* Header styles start */
+
+.Header {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header-title {
+  padding: 30px 0 10px 0;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 10px;
+}
+
+/* Header styles end */
+
 /* Note styles start */
 
 .note {
@@ -42,7 +59,6 @@
 }
 
 .icon-button:hover,
-.icon-button:focus,
 .icon-button:active {
   scale: 1.1;
 }
@@ -186,3 +202,59 @@ textarea:focus {
   z-index: 100;
 }
 /* CompleteArea styles end */
+
+/* Media start */
+
+@media screen and (max-width: 879px) {
+  .notes-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .CompleteArea {
+    flex-direction: row;
+    width: 150px;
+    height: 70px;
+    align-self: center;
+    transform: translateX(0);
+  }
+
+  .Modal {
+    flex-direction: column;
+    row-gap: 20px;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .Modal {
+    flex-direction: column;
+    row-gap: 20px;
+    align-content: center;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .notes-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .note-modal {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .note-modal {
+    width: 230px;
+    height: 400px;
+  }
+
+  .fullNote-footer {
+    flex-direction: column-reverse;
+    row-gap: 15px;
+  }
+}
+
+/* Media end */

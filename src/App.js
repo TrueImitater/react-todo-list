@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import NotesList from "./components/NotesList";
-import Search from "./components/Search";
+import Header from "./components/Header";
 import useNotes from "./hooks/useNotes";
 import Modal from "./components/Modal";
 import Context from "./scripts/context";
@@ -37,7 +37,7 @@ function App() {
     >
       <div className="container">
         {modal && <Modal setModal={setModal} />}
-        <Search setSearchText={setSearchText} />
+        <Header setSearchText={setSearchText} />
         <NotesList
           notes={notes.filter((note) =>
             note.text.toLowerCase().includes(searchText.trim().toLowerCase())

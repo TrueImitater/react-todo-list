@@ -4,8 +4,7 @@ import { MdOutlineSystemUpdateAlt, MdDeleteForever } from "react-icons/md";
 import Context from "../scripts/context";
 
 const FullNote = ({ setModal }) => {
-  const { updateNote, deleteNote, setClickedNote, clickedNote } =
-    useContext(Context);
+  const { updateNote, deleteNote, clickedNote } = useContext(Context);
   const [noteText, setNoteText] = useState(clickedNote.text);
 
   const characterLimit = 200;
@@ -29,7 +28,7 @@ const FullNote = ({ setModal }) => {
         value={noteText}
         onChange={handleChange}
       ></textarea>
-      <div className="note-footer">
+      <div className="note-footer fullNote-footer">
         <small>{characterLimit - noteText.length} Remaining</small>
         <div className="icon-places">
           <Tippy content="Update" delay={[500, 0]}>
