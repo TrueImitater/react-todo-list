@@ -1,0 +1,176 @@
+/* Note styles start */
+
+.note {
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 1rem;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  word-break: break-all;
+  transition: scale 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.note-effect:hover,
+.note-effect:focus,
+.note-effect:active {
+  scale: 1.05;
+}
+
+.note-complete {
+  background-color: lightgreen;
+}
+
+.note.new {
+  background-color: rgb(135, 175, 248);
+}
+
+.note-span {
+  pointer-events: none;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: rgb(135, 175, 248);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  transition: background-color 0.25s ease;
+}
+
+.save:hover {
+  background-color: #ededed;
+  cursor: pointer;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  cursor: pointer;
+  transition: scale 0.25s ease-in-out;
+}
+
+.icon:hover,
+.icon:focus,
+.icon:active {
+  scale: 1.1;
+}
+
+/* Note styles end */
+
+/* Notes-container styles start */
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Notes-container styles end */
+
+/* Search styles start */
+
+.Search {
+  padding-top: 20px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Search-input {
+  padding: 10px 35px;
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: #ededed;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.Search-input:focus {
+  background-color: #e1e1e1;
+}
+
+.search-icons {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+}
+
+/* Search styles end */
+
+/* Modal styles end */
+
+.Modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(97, 97, 97, 0.5);
+  transition: transform 0.25s ease-in-out;
+  z-index: 2;
+}
+
+/* Modal styles end */
+
+/* FullNote styles start */
+
+.note-modal {
+  width: 500px;
+  height: 600px;
+  background-color: #fef68a;
+  z-index: 100;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.icon-places {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fullNote__area {
+  background-color: #fef68a;
+}
+
+/* FullNote styles end */
+
+/* CompleteArea styles start */
+
+.CompleteArea {
+  width: 70px;
+  height: 150px;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateX(60%);
+}
+
+/* CompleteArea styles end */
